@@ -1,0 +1,19 @@
+version: ' 3 '
+
+
+services:
+  mongodb:
+    container_name: mongodb
+    image: reemboww-mongodb_live_app:1.0.0
+    build: .
+    ports:
+      - "3000"
+    environment:
+      - DB_URL = mongodb+srv://yamenhelal35:vvxTdCA3qf37hkYu@cluster0.2uw34do.mongodb.net/
+    depends_on:
+      - mongodb
+
+
+volumes:
+  pgdata: {}
+    
